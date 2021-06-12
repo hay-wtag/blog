@@ -1,0 +1,10 @@
+<h1>Selected Article</h1>
+<p>
+  Title: <%= @article.title %>
+</p>
+<p>
+  Description: <%= @article.description %>
+</p>
+<p>id : <%= @article.id %></p>
+<%= link_to "go back to the article table", articles_path%><br>
+<%= link_to "edit this article", edit_article_path(@article)%>
