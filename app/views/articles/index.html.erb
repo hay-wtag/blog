@@ -8,6 +8,12 @@
         </div>
         <div class="card-body">
           <p class="card-text"><%= truncate(article.description, length:50)%></p>
+          <div class="article_meta_details">
+            <small>crea by: <%= article.user.username if article.user %> ,
+              <%=time_ago_in_words(article.created_at) %> ago,
+              last updated: <%= time_ago_in_words(article.updated_at)%></small>
+          </div>
+          <hr>
           <%= link_to "edit this article", edit_article_path(article), class:"btn btn-primary"%>
           <%= link_to "delete this article", article_path(article),method: :delete,
                                       data: {confirm:"are you sure?"}, class:"btn btn-danger"%>
