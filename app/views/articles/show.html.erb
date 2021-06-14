@@ -1,10 +1,13 @@
-<h1>Selected Article</h1>
-<p>
-  Title: <%= @article.title %>
-</p>
-<p>
-  Description: <%= @article.description %>
-</p>
-<p>id : <%= @article.id %></p>
-<%= link_to "go back to the article table", articles_path%><br>
-<%= link_to "edit this article", edit_article_path(@article)%>
+<h2 align="center" >Title: <%= @article.title %></h2>
+<div class="well col-xs-8 col-xs-offset-2">
+  <h3 class="center"><strong>Description:</strong></h3>
+  <hr>
+  <%= simple_format(@article.description)%>
+</div>
+<hr>
+<div class="artice_actions">
+  <%= link_to "edit this article", edit_article_path(@article), class:"btn btn-primary"%>
+  <%= link_to "delete this article", article_path(@article),method: :delete,
+                                      data: {confirm:"are you sure?"}, class:"btn btn-danger"%>
+  <%= link_to "go back to the article table", articles_path , class:"btn btn-success"%>
+</div>

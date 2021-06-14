@@ -1,0 +1,51 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+.navbar-light{
+    background-color: navajowhite;
+} 
+
+.general{
+    color: white;
+}
+
+
+@import "bootstrap";
+
+
+#logo {
+    float: left;
+    font-size: 1.7em;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+.jumbotron {
+    background-image: asset-url('laptop.jpg');
+    background-size: cover;
+    height: 1000px;
+
+}
+footer {
+    text-align: center;
+}
+
+
+.article_title{
+ 
+    font_weight: bold;
+    font-size:2em
+
+}
+
+.article_title a{
+    text-decoration:none !important;
+}
+
+.card_style{
+    margin-top:10px;
+}

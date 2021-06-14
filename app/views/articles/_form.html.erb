@@ -1,22 +1,19 @@
-<% if @article.errors.any? %>
-  <ul>
-    <h2>These are the errors</h2>
-    <% @article.errors.full_messages.each do |msg| %>
-      <li> <%= msg %> </li>
-    <% end %>
-  </ul>
-<% end %>
-<%= form_for @article do |f| %>
-  <p>
-    <%= f.label :title %> </br>
-  <%= f.text_field :title %>
-</p>
-<p>
-  <%= f.label :description %></br>
-<%= f.text_area :description %>
-</p>
-<p>
-  <%= f.submit %>
-</p>
-<% end %>
-<%= link_to "go back to the article table", articles_path%>
+<%= render 'shared/errors', obj: @article%>
+<div class="row">
+  <div class="col-md-12">
+    <%= form_for @article do |f| %>
+      <div class="mb-3">
+        <%= f.label :title ,class:"form-label"%>
+        <%= f.text_field :title ,class:"form-control"%>
+      </div>
+      <div class="mb-3">
+        <%= f.label :description ,class:"form-label"%></br>
+      <%= f.text_area :description,class:"form-control", rows: 10 %>
+    </div>
+    <%= f.submit class:"btn btn-outline-success"%>
+  <% end %>
+  <div class="mb-3" align="center">
+    <%= link_to "go back to the article table", articles_path , class:"btn btn-success"%>
+  </div>
+</div>
+</div>
