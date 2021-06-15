@@ -34,9 +34,9 @@
           <form class="d-flex">
             <%= link_to 'Logout', logout_path, class: "btn btn-outline-success",method: :delete %>
           </form>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown ">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
-              Your Profile 
+              Profile <%= "Admin" if current_user.admin?%>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li>

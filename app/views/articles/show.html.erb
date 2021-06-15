@@ -16,7 +16,7 @@
 </div>
 <hr>
 <div class="artice_actions">
-  <%if logged_in? && current_user == @article.user%>
+  <%if logged_in? && (current_user == @article.user || current_user.admin?)%>
     <%= link_to "edit this article", edit_article_path(@article), class:"btn btn-primary"%>
     <%= link_to "delete this article", article_path(@article),method: :delete,
                                       data: {confirm:"are you sure?"}, class:"btn btn-danger"%>
