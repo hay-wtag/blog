@@ -2,7 +2,7 @@
 <div align="center">
   <%= will_paginate %>
 </div>
-<%= @users.each do |user|%>
+<% @users.each do |user|%>
   <div class="card card_style">
     <div class="card-header article_title">
       <%= link_to gravatar_for(user), user_path(user)%>

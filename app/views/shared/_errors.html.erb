@@ -9,7 +9,7 @@
           <%= pluralize(obj.errors.count,"error") %>
           stopped from saving because
         </h2>
-        <div >
+        <div class= "panel-body">
           <ul>
             <% obj.errors.full_messages.each do |msg| %>
               <li> <%= msg %> </li>

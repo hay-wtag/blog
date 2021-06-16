@@ -10,6 +10,8 @@ gem "bcrypt", "~> 3.1.7"
 gem "will_paginate"
 gem "will_paginate-bootstrap"
 gem "kaminari", "~> 1.2.1"
+gem "rexml"
+gem "rails-controller-testing"
 
 # Use Puma as the app server
 gem "puma", "~> 5.0"
