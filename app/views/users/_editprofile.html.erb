@@ -1,0 +1,19 @@
+<%= render 'shared/errors', obj: @user%>
+<div class="row">
+  <div class="col-md-12">
+    <%= form_for @user do |f| %>
+      <div class="mb-3">
+        <%= f.label :username ,class:"form-label"%>
+        <%= f.text_field :username ,class:"form-control" , autofocus: true%>
+      </div>
+      <div class="mb-3">
+        <%= f.label :email ,class:"form-label"%></br>
+      <%= f.email_field :email ,class:"form-control" %>
+    </div>
+    <%= f.submit(@user.new_record? ? "Sign up!" : "Confirm update",class:"btn btn-outline-success")%>
+  <% end %>
+  <div class="mb-3" align="center">
+    <%= link_to "go back to the article table", articles_path , class:"btn btn-success"%>
+  </div>
+</div>
+</div>

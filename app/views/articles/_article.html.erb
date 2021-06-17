@@ -12,6 +12,9 @@
               <%=time_ago_in_words(article.created_at) %> ago,
               last updated: <%= time_ago_in_words(article.updated_at)%></small>
           </div>
+          <% if article.categories.any?%>
+            <p>Associated categories:  <%= render article.categories%></p>
+          <%end%>
           <% if logged_in? && (current_user== article.user || current_user.admin?) %>
             <hr>
             <%= link_to "edit this article", edit_article_path(article), class:"btn btn-primary"%>

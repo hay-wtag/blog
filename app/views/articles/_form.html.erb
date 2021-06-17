@@ -10,6 +10,15 @@
         <%= f.label :description ,class:"form-label"%></br>
       <%= f.text_area :description,class:"form-control", rows: 10 %>
     </div>
+    <div class="row">
+      <div class="mb-3">
+        <div class="form-check">
+          <%= f.collection_check_boxes :category_ids, Category.all,:id, :name do |cb|%>
+            <%= cb.label(class: "form-check-input-inline design_checkbox") {cb.check_box(class: "form-check-input-inline")+cb.text}%>
+          <%end%>
+        </div>
+      </div>
+    </div>
     <%= f.submit class:"btn btn-outline-success"%>
   <% end %>
   <div class="mb-3" align="center">

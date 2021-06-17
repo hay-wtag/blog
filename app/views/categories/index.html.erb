@@ -6,6 +6,9 @@
       <div align="center" class="card-header article_title" >
         <%= link_to "#{category.name}", category_path(category) %>
       </div>
+      <div align="center">
+        <p><%=pluralize(category.articles.count, "article")%></p>
+      </div>
     </div>
   <%end%>
 </div>
