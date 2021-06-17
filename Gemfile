@@ -12,6 +12,7 @@ gem "will_paginate-bootstrap"
 gem "kaminari", "~> 1.2.1"
 gem "rexml"
 gem "rails-controller-testing"
+gem "devise_zxcvbn"
 
 # Use Puma as the app server
 gem "puma", "~> 5.0"
